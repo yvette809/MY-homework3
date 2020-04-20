@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fav Barber's Shop</title>
+    <style>
+body{
+    background-color: aqua;
+}
+h1{
+    color: gray;
+    text-align: center;
+    font: size 20px;;
+}
+p{
+    color:auto;
+    
+}
+table,th,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+footer{
+    color: burlywood;
+    margin: 60px;
+    text-align: right;
+}
+#promo{
+    color: aqua;
+    text-align: center;
+}
+.pro{
+    position:relative;
+    width: 50%;
+    float: left;
+
+
+}
+
+    </style>
+</head>
+<body>
+    <h1>Terrel & co Babrber's Shop</h1>
+    <p>Welcome to my shop. Our vision is to provide the most modern hair cuts at very 
+        moderate prices. We keep our customers happy
+    </p>
+<section>
+    <h2 id = "promo">Promo</h2>
+    <h class = pro>From May 1st - May 14, we are offering half price to all our customers for this 
+        award winning hair-cut </h>
+    <img src="images/barber.jpg" alt="sample hair cut" style="width: 100px;height: 100px;">
+</section>
+<section>
+    <address>
+        visit us at: Språkgränd 29 <br>
+        90735,Umeå <br>
+        Sweden <br>
+        <a href="https://www.google.com/maps/place/Spr%C3%A5kgr%C3%A4nd+29,+907+33+Ume%C3%A5/@63.8105556,20.3146488,17z/data=!3m1!4b1!4m5!3m4!1s0x467c5af7e9496c3f:0x770aed5d06ecb21a!8m2!3d63.8105556!4d20.3168429">Språkgränd 29</a>
+
+    </address><br><hr style="border:2px dotted red"; width="25%>
+
+</section>
+<section>
+    <form>
+        <ul style="list-style-type: none; margin-bottom:100px;">
+            <li >
+                <label for="mail">Email</label>
+                <input type="email" id="email">
+            </li> <br>
+            <li class="button">
+                <button type = "submit">submit</button>
+
+            </li>
+        </ul>
+ 
+    </form><hr style="border:2px dotted red"; width="25%">
+</section>
+<section>
+    <form id="contact">
+        <label for="fname">Name</label>
+        <input type="text" id = "fname"><br><br>
+        <label for="phone">Phone Number</label>
+        <input type="telephone" id = "phone" name ="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
+        <label for="date">date</label>
+        <input type="date" id = "date" name="date"><br><br>
+        <input type= "submit" name = "submit">
+        <hr style="border:2px dotted red;" width="25%">
+    </form>
+</section>
+<section>
+    <table>
+        <tr>
+            <th>Service</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>hair-cut</td>
+            <td>$20</td>
+        </tr>
+        <tr>
+            <td>hair-cut + shampoo</td>
+            <td>$50</td>
+        </tr>
+        <tr>
+            <td>complete(hair-dye,shampoo and cut)</td>
+            <td>$90</td>
+        </tr>
+    </table>
+    </section>
+
+<section>
+<footer>
+    Terrel & Co Barber's shop
+    Språkgränd29,90735, Umeå,Sweden
+    0046760726885
+    <a href="https://mail.google.com/mail/u/0/#inbox"></a>
+</footer>
+</section>
+   <script>
+let email =document.querySelector('#email').value;
+email.onclick = function(){
+    console.log (email);
+}
+function submitForm(){
+    console.log("")
+}
+let info = document.querySelector("#contact");
+info.addEventListener ("click", function)
+
+   </script>
+</body>
+</html>
