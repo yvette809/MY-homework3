@@ -37,7 +37,8 @@ th{
 footer{
     color: burlywood;
     margin: 60px;
-    text-align: right;
+    text-align: left;
+    padding: 70px;
 }
 em{
     text-decoration:line-through ;
@@ -45,10 +46,19 @@ em{
 img{
    height: 500px; 
 }
+nav{
+    text-align: right;
+}
 
 #promo{
     color: aqua;
     text-align: center;
+}
+.ni{
+    
+    list-style-type:none ;
+    
+    
 }
 .pro{
     position:relative;
@@ -78,13 +88,43 @@ img{
     padding: 20px;
     font-size: 2rem;
 }
+.niv{
+    display: inline;
+    padding: 40px;
+    font-size: 1.5rem;
+    
+    
+}
+.hr{
+    color:turquoise;
+}
+a{
+    color: seagreen;
+}
+a:hover{
+    color: teal;
+   
+    
+}
+
+nav{
+    
+}
     </style>
 </head>
 <body>
+    <nav>
+        <ul class = "ni">
+            <li class = "niv"><a class = "hr" href="#PROMO">Promotion</a></li>
+            <li class = "niv"><a class = "hr" href="#Address">Visiting Address</a></li>
+            <li class = "niv"><a class = "hr" href="Products">Product Catalogue</a></li>
+        </ul>
+        </nav>
     <h1>Terrel & Co Baber's Shop</h1>
     <p class ="vision">Welcome to my shop. Our vision is to provide the most modern hair cuts at very 
         moderate prices. We keep our customers happy
     </p>
+    
 <section>
     <div class="jumbotron">
         
@@ -142,7 +182,7 @@ img{
         <label for="fname">Name</label>
         <input type="text" id = "fname"><br><br>
         <label for="phone">Phone Number</label>
-        <input type="telephone" id = "phone" name ="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
+        <input type="telephone" id = "phone" name ="phone"><br><br>
         <label for="date">date</label>
         <input type="date" id = "date" name="date"><br><br>
         <input type= "submit" name = "submit">
@@ -184,9 +224,14 @@ let email =document.querySelector('#email').value;
 function submitForm(){
     console.log("email");
 };
-let info = document.querySelector("#contact");
-info.addEventListener ("click", function)
 
+let date = document.querySelector('#date');
+let phoneNumber = document.querySelector('#phone');
+let name = document.querySelector('#fname');
+function getDetails(){
+    console.log(`${date}${phoneNumber}${name}`);
+}
+getDetails();
    </script>
 </body>
 </html>
