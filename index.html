@@ -2,10 +2,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>My Fav Barber's Shop</title>
     <style>
 body{
-    background-color: aqua;
+    background-color: skyblue;
+    background-image: url("images/haircut.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: antiquewhite;
+    color: white;
 }
 h1{
     color: gray;
@@ -16,15 +22,30 @@ p{
     color:auto;
     
 }
+h4{
+    color: royalblue;
+    text-align: center;
+}
 table,th,td{
     border: 2px solid black;
     border-collapse: collapse;
+    padding: 20px;
+}
+th{
+    font-size:large;
 }
 footer{
     color: burlywood;
     margin: 60px;
     text-align: right;
 }
+em{
+    text-decoration:line-through ;
+}
+img{
+   height: 500px; 
+}
+
 #promo{
     color: aqua;
     text-align: center;
@@ -34,34 +55,74 @@ footer{
     width: 50%;
     float: left;
 
-
 }
-
+.display-4{
+    color: cyan;
+    font-weight: bold;
+}
+.lead{
+    font-size: 2rem;
+    color: darkcyan;
+}
+.im3{
+    margin-left: 100px;
+}
+#contact{
+    margin-bottom: 50px;
+}
+.jumbotron{
+    background-color: darkolivegreen;
+}
+.vision{
+    width: 50%;
+    padding: 20px;
+    font-size: 2rem;
+}
     </style>
 </head>
 <body>
-    <h1>Terrel & co Babrber's Shop</h1>
-    <p>Welcome to my shop. Our vision is to provide the most modern hair cuts at very 
+    <h1>Terrel & Co Baber's Shop</h1>
+    <p class ="vision">Welcome to my shop. Our vision is to provide the most modern hair cuts at very 
         moderate prices. We keep our customers happy
     </p>
 <section>
-    <h2 id = "promo">Promo</h2>
-    <h class = pro>From May 1st - May 14, we are offering half price to all our customers for this 
-        award winning hair-cut </h>
-    <img src="images/barber.jpg" alt="sample hair cut" style="width: 100px;height: 100px;">
+    <div class="jumbotron">
+        
+        <h1 class="display-4">PROMO!</h1>
+        <p class="lead">Half prices to all of our amazing styles.Prices run till 31/05.</p>
+        <hr class="my-4">
+        <div class="row">
+        <div class = "column col-4">
+        <img src="images/barber.jpg" alt="hair-style">
+        <h4>straight-face <em>$60</em> $30</h4>
+        </div>
+        <div class = "column col-4">
+        <img src="images/short.jpg" alt="short-fade style">
+        <h4>short-fade <em>$40</em> $20</h4>
+        </div>
+        <div class = "column col-4">
+            <img src="images/line.jpg" alt="line-cut" class = im3>
+            <h4>Line-cut <em>$50</em> $25</h4>
+        </div> 
+    </div>
+    
+      </div>
 </section>
 <section>
+    <h2>Our visiting Address</h2>
     <address>
-        visit us at: Språkgränd 29 <br>
-        90735,Umeå <br>
-        Sweden <br>
+        <p>visit us at: Språkgränd 29</p> 
+       <p>90735,Umeå</p>
+        <p>Sweden</p>
         <a href="https://www.google.com/maps/place/Spr%C3%A5kgr%C3%A4nd+29,+907+33+Ume%C3%A5/@63.8105556,20.3146488,17z/data=!3m1!4b1!4m5!3m4!1s0x467c5af7e9496c3f:0x770aed5d06ecb21a!8m2!3d63.8105556!4d20.3168429">Språkgränd 29</a>
 
-    </address><br><hr style="border:2px dotted red"; width="25%>
+    </address><br>
 
 </section>
 <section>
+   
     <form>
+       
         <ul style="list-style-type: none; margin-bottom:100px;">
             <li >
                 <label for="mail">Email</label>
@@ -73,9 +134,10 @@ footer{
             </li>
         </ul>
  
-    </form><hr style="border:2px dotted red"; width="25%">
+    </form>
 </section>
 <section>
+    <h2>Your contact Details</h2>
     <form id="contact">
         <label for="fname">Name</label>
         <input type="text" id = "fname"><br><br>
@@ -84,10 +146,11 @@ footer{
         <label for="date">date</label>
         <input type="date" id = "date" name="date"><br><br>
         <input type= "submit" name = "submit">
-        <hr style="border:2px dotted red;" width="25%">
+        
     </form>
 </section>
 <section>
+    <h2>Product Catalogue</h2>
     <table>
         <tr>
             <th>Service</th>
@@ -117,13 +180,10 @@ footer{
 </footer>
 </section>
    <script>
-let email =document.querySelector('#email').value;
-email.onclick = function(){
-    console.log (email);
-}
+let email =document.querySelector('#email').value; 
 function submitForm(){
-    console.log("")
-}
+    console.log("email");
+};
 let info = document.querySelector("#contact");
 info.addEventListener ("click", function)
 
